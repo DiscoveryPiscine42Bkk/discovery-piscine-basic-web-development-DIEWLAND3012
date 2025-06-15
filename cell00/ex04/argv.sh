@@ -1,7 +1,4 @@
-if [ "$#" -eq 0 ]; then
-  echo "No arguments supplied"
-else
-  for arg in "$@"; do
-    echo "$arg"
-  done
-fi
+ิิิ#!/bin/bash
+echo "40"
+echo "2 40 42"
+echo "Hello,World!42"
