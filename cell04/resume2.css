@@ -1,0 +1,232 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fffdfd;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #2596be;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 1rem 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.navbar .container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+/* Section */
+.section {
+  padding: 100px 20px 60px;
+}
+
+.bg-light {
+  background-color: #f8f5f9;
+}
+
+/* Intro */
+.center {
+  text-align: center;
+}
+
+.profile-pic {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.job-title {
+  color: #666;
+  font-style: italic;
+}
+
+/* Experience & Skills */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.box {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  flex: 1;
+  min-width: 250px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.box h3 {
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.box ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* Contact */
+#contact a {
+  color: #000000;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  background-color: #2596be;
+  text-align: center;
+  padding: 1rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .flex {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* CSS ทั่วไปสำหรับกล่อง Experience และ Skill (ถ้ายังไม่ได้เพิ่ม) */
+.box {
+  margin-bottom: 20px; /* Adds space below each box */
+}
+
+/* ---------------------------------------------------------------------- */
+/* CSS สำหรับแถบสไลด์ (ใช้กับทั้ง YouTube และ Instagram เพื่อ DRY code) */
+/* ---------------------------------------------------------------------- */
+.youtube-thumbnail-slider,
+.instagram-thumbnail-slider {
+  display: flex; /* Arranges items in a row */
+  overflow-x: auto; /* Enables horizontal scrolling if content overflows */
+  -webkit-overflow-scrolling: touch; /* Improves scrolling on iOS devices */
+  padding-bottom: 15px; /* Adds space for scrollbar on some browsers */
+  gap: 15px; /* Space between thumbnails */
+  scroll-snap-type: x mandatory; /* Optional: Snaps to each item when scrolling */
+}
+
+.youtube-thumbnail-slider a,
+.instagram-thumbnail-slider a {
+  flex-shrink: 0; /* Prevents items from shrinking */
+  scroll-snap-align: start; /* Optional: Aligns item to the start of the scroll area */
+  text-decoration: none; /* Removes underline from links */
+}
+
+/* Optional: Hide scrollbar but keep functionality for a cleaner look */
+.youtube-thumbnail-slider::-webkit-scrollbar,
+.instagram-thumbnail-slider::-webkit-scrollbar {
+  height: 8px; /* Height of the scrollbar */
+}
+
+.youtube-thumbnail-slider::-webkit-scrollbar-thumb,
+.instagram-thumbnail-slider::-webkit-scrollbar-thumb {
+  background-color: #ccc; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+}
+
+.youtube-thumbnail-slider::-webkit-scrollbar-track,
+.instagram-thumbnail-slider::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color of the scrollbar track */
+  border-radius: 10px;
+}
+
+.youtube-thumbnail-slider img {
+  width: 280px;
+  height: 157.5px;
+
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  display: block;
+  object-fit: cover;
+}
+
+.youtube-thumbnail-slider img:hover {
+  transform: translateY(-5px);
+}
+
+/* ---------------------------------------------------------------------- */
+/* CSS สำหรับรูปภาพ Instagram (อัตราส่วน 1:1) */
+/* ---------------------------------------------------------------------- */
+.instagram-thumbnail-slider img {
+  width: 180px; /* กำหนดความกว้างสำหรับรูป Instagram (1:1) */
+  height: 180px; /* กำหนดความสูงสำหรับรูป Instagram (1:1) */
+
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  display: block;
+  object-fit: cover;
+}
+
+.instagram-thumbnail-slider img:hover {
+  transform: translateY(-5px);
+}
+
+.btnH{
+  display: block;
+  margin: 15px auto;
+  padding: 15px 25px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  width: 100px;
+}
