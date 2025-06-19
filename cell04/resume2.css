@@ -146,59 +146,6 @@ body {
 }
 
 /* ---------------------------------------------------------------------- */
-/* CSS สำหรับแถบสไลด์ (ใช้กับทั้ง YouTube และ Instagram เพื่อ DRY code) */
-/* ---------------------------------------------------------------------- */
-.youtube-thumbnail-slider,
-.instagram-thumbnail-slider {
-  display: flex; /* Arranges items in a row */
-  overflow-x: auto; /* Enables horizontal scrolling if content overflows */
-  -webkit-overflow-scrolling: touch; /* Improves scrolling on iOS devices */
-  padding-bottom: 15px; /* Adds space for scrollbar on some browsers */
-  gap: 15px; /* Space between thumbnails */
-  scroll-snap-type: x mandatory; /* Optional: Snaps to each item when scrolling */
-}
-
-.youtube-thumbnail-slider a,
-.instagram-thumbnail-slider a {
-  flex-shrink: 0; /* Prevents items from shrinking */
-  scroll-snap-align: start; /* Optional: Aligns item to the start of the scroll area */
-  text-decoration: none; /* Removes underline from links */
-}
-
-/* Optional: Hide scrollbar but keep functionality for a cleaner look */
-.youtube-thumbnail-slider::-webkit-scrollbar,
-.instagram-thumbnail-slider::-webkit-scrollbar {
-  height: 8px; /* Height of the scrollbar */
-}
-
-.youtube-thumbnail-slider::-webkit-scrollbar-thumb,
-.instagram-thumbnail-slider::-webkit-scrollbar-thumb {
-  background-color: #ccc; /* Color of the scrollbar thumb */
-  border-radius: 10px; /* Rounded corners for the scrollbar thumb */
-}
-
-.youtube-thumbnail-slider::-webkit-scrollbar-track,
-.instagram-thumbnail-slider::-webkit-scrollbar-track {
-  background-color: #f1f1f1; /* Color of the scrollbar track */
-  border-radius: 10px;
-}
-
-.youtube-thumbnail-slider img {
-  width: 280px;
-  height: 157.5px;
-
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease-in-out;
-  display: block;
-  object-fit: cover;
-}
-
-.youtube-thumbnail-slider img:hover {
-  transform: translateY(-5px);
-}
-
-/* ---------------------------------------------------------------------- */
 /* CSS สำหรับรูปภาพ Instagram (อัตราส่วน 1:1) */
 /* ---------------------------------------------------------------------- */
 .instagram-thumbnail-slider img {
