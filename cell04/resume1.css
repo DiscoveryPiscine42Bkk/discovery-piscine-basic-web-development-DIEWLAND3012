@@ -140,57 +140,49 @@ body {
   }
 }
 
-/* CSS ทั่วไปสำหรับกล่อง Experience และ Skill (ถ้ายังไม่ได้เพิ่ม) */
 .box {
-  margin-bottom: 20px; /* Adds space below each box */
+  margin-bottom: 20px; /* ระยะห่าง */
 }
 
-/* ---------------------------------------------------------------------- */
-/* CSS สำหรับแถบสไลด์ (ใช้กับทั้ง YouTube และ Instagram เพื่อ DRY code) */
-/* ---------------------------------------------------------------------- */
+
 .youtube-thumbnail-slider,
 .instagram-thumbnail-slider {
-  display: flex; /* Arranges items in a row */
-  overflow-x: auto; /* Enables horizontal scrolling if content overflows */
-  -webkit-overflow-scrolling: touch; /* Improves scrolling on iOS devices */
-  padding-bottom: 15px; /* Adds space for scrollbar on some browsers */
-  gap: 15px; /* Space between thumbnails */
-  scroll-snap-type: x mandatory; /* Optional: Snaps to each item when scrolling */
+  display: flex; 
+  overflow-x: auto; 
+  -webkit-overflow-scrolling: touch; 
+  padding-bottom: 15px; 
+  gap: 15px; 
+  scroll-snap-type: x mandatory; 
 }
 
 .youtube-thumbnail-slider a,
 .instagram-thumbnail-slider a {
-  flex-shrink: 0; /* Prevents items from shrinking */
-  scroll-snap-align: start; /* Optional: Aligns item to the start of the scroll area */
-  text-decoration: none; /* Removes underline from links */
+  flex-shrink: 0; 
+  scroll-snap-align: start; 
+  text-decoration: none;
 }
 
-/* Optional: Hide scrollbar but keep functionality for a cleaner look */
 .youtube-thumbnail-slider::-webkit-scrollbar,
 .instagram-thumbnail-slider::-webkit-scrollbar {
-  height: 8px; /* Height of the scrollbar */
+  height: 8px; 
 }
 
 .youtube-thumbnail-slider::-webkit-scrollbar-thumb,
 .instagram-thumbnail-slider::-webkit-scrollbar-thumb {
-  background-color: #ccc; /* Color of the scrollbar thumb */
-  border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+  background-color: #ccc; 
+  border-radius: 10px; 
 }
 
 .youtube-thumbnail-slider::-webkit-scrollbar-track,
 .instagram-thumbnail-slider::-webkit-scrollbar-track {
-  background-color: #f1f1f1; /* Color of the scrollbar track */
+  background-color: #f1f1f1; 
   border-radius: 10px;
 }
 
 
-/* ---------------------------------------------------------------------- */
-/* CSS สำหรับรูปภาพ YouTube (อัตราส่วน 16:9) */
-/* ---------------------------------------------------------------------- */
 .youtube-thumbnail-slider img {
-  width: 280px; /* กำหนดความกว้างสำหรับรูป YouTube */
-  height: 157.5px; /* กำหนดความสูงสำหรับรูป YouTube (280 / 16 * 9 = 157.5) */
-  /* หรือใช้ height: 160px; ตามค่าเดิมที่เคยใช้ก็ได้ ถ้าไม่ต้องการเป๊ะ 16:9 */
+  width: 280px; /* ความกว้าง YouTube */
+  height: 157.5px; /* ความสูง YouTube (280 / 16 X 9 = 157.5) */
 
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -203,12 +195,9 @@ body {
   transform: translateY(-5px);
 }
 
-/* ---------------------------------------------------------------------- */
-/* CSS สำหรับรูปภาพ Instagram (อัตราส่วน 1:1) */
-/* ---------------------------------------------------------------------- */
 .instagram-thumbnail-slider img {
-  width: 180px; /* กำหนดความกว้างสำหรับรูป Instagram (1:1) */
-  height: 180px; /* กำหนดความสูงสำหรับรูป Instagram (1:1) */
+  width: 180px; /* ความกว้าง IG (1:1) */
+  height: 180px; /* ความสูง IG (1:1) */
 
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

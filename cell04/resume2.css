@@ -140,17 +140,15 @@ body {
   }
 }
 
-/* CSS ทั่วไปสำหรับกล่อง Experience และ Skill (ถ้ายังไม่ได้เพิ่ม) */
+
 .box {
   margin-bottom: 20px; /* Adds space below each box */
 }
 
-/* ---------------------------------------------------------------------- */
-/* CSS สำหรับรูปภาพ Instagram (อัตราส่วน 1:1) */
-/* ---------------------------------------------------------------------- */
+
 .instagram-thumbnail-slider img {
-  width: 180px; /* กำหนดความกว้างสำหรับรูป Instagram (1:1) */
-  height: 180px; /* กำหนดความสูงสำหรับรูป Instagram (1:1) */
+  width: 180px; 
+  height: 180px; 
 
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
